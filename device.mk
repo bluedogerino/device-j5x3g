@@ -21,7 +21,7 @@ $(call inherit-product, device/samsung/msm8916-common/msm8916.mk)
 # Inherit from vendor
 $(call inherit-product-if-exists, vendor/samsung/j5x-common/j5x-common-vendor.mk)
 
-LOCAL_PATH := device/samsung/j5x-common
+LOCAL_PATH := device/samsung/j5xnlte
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -38,3 +38,19 @@ endif
 
 # Inhert dalvik heap values from aosp
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk
+
+# Common overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+#Inherit from vendor
+$(call inherit-product-if-exists, vendor/samsung/j5xnlte/j5xnlte-vendor.mk)
+
+# Inherit from common
+$(call inherit-product, device/samsung/j5xnlte/device.mk)
+
+
+
+

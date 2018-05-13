@@ -38,23 +38,33 @@ void init_target_properties(void)
 	std::string bootloader = android::base::GetProperty("ro.bootloader", "");
 
 	if (bootloader.find("J510FN") == 0) {
-                device = (char *)"j5xnlte";
-                model = (char *)"SM-J510FN";
-                set_lte_properties();
+        device = (char *)"j5xnlte";
+        model = (char *)"SM-J510FN";
+        set_lte_properties();
 	}
 	else if (bootloader.find("J510F") == 0) {
 		device = (char *)"j5xlte";
 		model = (char *)"SM-J510F";
 		set_lte_properties();
 	}
+	else if (bootloader.find("J510FQ") == 0) {
+		device = (char *)"j5xnlte";
+		model = (char *)"SM-J510FQ";
+		set_lte_properties();
+	}
 	else if (bootloader.find("J510MN") == 0) {
 		device = (char *)"j5xnlte";
-		model = (char *)"SM-J510F";
+		model = (char *)"SM-J510MN";
 		set_lte_properties();
 	}
 	else if (bootloader.find("J510GN") == 0) {
 		device = (char *)"j5xnlte";
-		model = (char *)"SM-J510F";
+		model = (char *)"SM-J510GN";
+		set_lte_properties();
+	}
+	else if (bootloader.find("J510UN") == 0) {
+		device = (char *)"j5xnlte";
+		model = (char *)"SM-J510UN";
 		set_lte_properties();
 	}
 	else {
