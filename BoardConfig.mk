@@ -16,16 +16,16 @@
 # Inherit from common
 include device/samsung/msm8916-common/BoardConfigCommon.mk
 
-LOCAL_PATH := device/samsung/j5xnlte
+LOCAL_PATH := device/samsung/j5x3g
 
 # Include board config fragments
 include $(LOCAL_PATH)/board/*.mk
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := j5xnlte,j5xlte
+TARGET_OTA_ASSERT_DEVICE := j5x3g
 
 # Kernel
-TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_j5xnlte_eur_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_j5x3g_mea_defconfig
 
 # Partition sizes
 BOARD_SYSTEMIMAGE_PARTITION_SIZE    := 2181038080

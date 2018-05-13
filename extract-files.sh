@@ -19,7 +19,7 @@
 set -e
 
 # Required!
-export DEVICES="j5xnlte j5xlte"
+export DEVICES="j5x3g"
 export BOARD_COMMON=msm8916-common
 export VENDOR=samsung
 
